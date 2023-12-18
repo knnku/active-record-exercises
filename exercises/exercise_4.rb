@@ -7,3 +7,10 @@ puts "Exercise 4"
 puts "----------"
 
 # Your code goes here ...
+
+# - Surrey (annual_revenue of 224000, carries women's apparel only)
+surrey = Store.create(name: "Surrey Store", annual_revenue: 224000, mens_apparel: false, womens_apparel: true)
+# - Whistler (annual_revenue of 1900000 carries men's apparel only)
+whistler = Store.create(name: "Whistler Store", annual_revenue: 1900000, mens_apparel: true, womens_apparel: false)
+# - Yaletown (annual_revenue of 430000 carries men's and women's apparel)
+yaletown = Store.create(name: "Yaletown Store", annual_revenue: 430000, mens_apparel: true, womens_apparel: true)
