@@ -14,3 +14,13 @@ surrey = Store.create(name: "Surrey Store", annual_revenue: 224000, mens_apparel
 whistler = Store.create(name: "Whistler Store", annual_revenue: 1900000, mens_apparel: true, womens_apparel: false)
 # - Yaletown (annual_revenue of 430000 carries men's and women's apparel)
 yaletown = Store.create(name: "Yaletown Store", annual_revenue: 430000, mens_apparel: true, womens_apparel: true)
+
+@mens_stores = Store.where(mens_apparel: true)
+
+p @mens_stores.each {|store| p store.name, store.annual_revenue }
+
+@womens_stores = Store.where(womens_apparel: true).where('annual_revenue < ?', 1000000)
+
+
+
+
